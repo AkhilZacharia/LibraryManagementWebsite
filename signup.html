@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="stylesheet" href="./css/signUpStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="bdy">
+        <div id="headerBox">
+            <nav class="navbar navbar-expand-lg navbar-light " style="padding-left: 7%;">
+              <a class="" href="home.html">HOME</a>
+              <a class="" href="./login.html">LOGIN</a>
+              <a class="" href="./signup.html">SIGNUP</a>
+            </nav>
+        </div>
+        <div id="secondBox">
+            
+            <h1>Library</h1>
+        </div>
+    </div>
+    <div id="topBox" style="z-index: 2;">
+        <h1>Create your account</h1>
+        <form onsubmit="return !!(nameCheck()&phoneValid()&passTest()&confirmPass()&pinCheck());" action="./login.html" >
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <h2>Watch,Listen and Learn new things...</h2>
+                    <label for="userName">Name</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Atleast 5 Characters" onchange="nameCheck()" required >
+                  </div>
+            </div>
+             <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="phoneNo">PhoneNo</label>
+                    <input type="number" class="form-control" id="phoneNo" onchange="phoneValid()" required>
+                  </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" onchange="passTest()" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" onchange="confirmPass()" required>
+              </div>
+            </div>
+           <div class="form-group col-md-5">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Kerala</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPin">Pin Code</label>
+                <input type="number" class="form-control" id="inputPin" onchange="pinCheck()" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <h6>Gender: </h6>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked >
+                    <label class="form-check-label" for="inlineRadio1">male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">female</label>
+                  </div>
+                  <label for="dob">Date of Birth : </label>
+
+                  <input type="date" id="dob" name="trip-start"
+                        value="2020-05-25"
+                        min="1990-01-01" max="2010-12-31">
+            </div>
+                  <!-- <h6>DOB </h6>
+                  <div class="form-group col-md-1 ">
+                    <label for="inputDate">dd</label>
+                    <select id="inputDate" class="form-control">
+                      <option selected>00</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                      <option>16</option>
+                      <option>17</option>
+                      <option>18</option>
+                      <option>19</option>
+                      <option>20</option>
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                      <option>25</option>
+                      <option>26</option>
+                      <option>27</option>
+                      <option>28</option>
+                      <option>29</option>
+                      <option>30</option>
+                      <option>31</option>
+                    </select>
+                    </div>
+                    <div class="form-group col-md-2 ">
+                        <label for="inputMonth">mm</label>
+                        <select id="inputMonth" class="form-control">
+                          <option selected>march</option>
+                          <option>April</option>
+                          <option>May</option>
+                          <option>June</option>
+                          <option>July</option>
+                          <option>August</option>
+                          <option>September</option>
+                          <option>October</option>
+                          <option>November</option>
+                          <option>December</option>
+                          <option>January</option>
+                          <option>February</option>
+                          <option>March</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputYear">yyyy</label>
+                        <select id="inputYear" class="form-control">
+                          <option selected>2010</option>
+                          <option>2011</option>
+                          <option>2012</option>
+                          <option>2013</option>
+                          <option>2014</option>
+                          <option>2015</option>
+                          <option>2016</option>
+                          <option>2017</option>
+                          <option>2018</option>
+                          <option>2019</option>
+                          <option>2020</option>
+                        </select>
+                      </div> -->
+            <!-- </div> -->
+            <!-- <div class="form-row">
+                
+            </div> -->
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+    </div>
+    <nav class="fixed-bottom bottomNav" style="background: none;z-index: 0;">
+        <h4 class="" href="#">Follow Us</h4>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" style="background-color: #3c96fd;">Twitter</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #3a589b;">Facebook</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #c54332;">Google+</button>
+        </div>
+      </nav>
+<script src="./script/signupScript.js"></script>
+</body>
+</html>

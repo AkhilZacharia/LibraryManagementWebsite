@@ -1,0 +1,23 @@
+{
+  "name": "librarymanagementwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhilZacharia/LibraryManagementWebsite.git"
+  },
+  "author": "Akhil Zacharia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkhilZacharia/LibraryManagementWebsite/issues"
+  },
+  "homepage": "https://github.com/AkhilZacharia/LibraryManagementWebsite#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
